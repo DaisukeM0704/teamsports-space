@@ -3,9 +3,11 @@
   min-width: 800px;
   height: 100%;
   background-image: url('memphis.jpg');
+  background-attachment: fixed;
   background-color:rgba(255,255,255,0.8);
   background-blend-mode:lighten;
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
 }
@@ -119,6 +121,14 @@
   padding: 0 5px;
 }
 
+.profile-text  {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
 
 .field_with_errors {
   display: contents;
