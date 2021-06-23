@@ -1,0 +1,20 @@
+.teams-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-image: url('memphis.jpg');
+  background-attachment: fixed;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.teams-logins {
+  text-decoration: none;
+  line-height: 20px;
+  margin: 0px 1vw;
+  color: #FFFFFF;
+}
