@@ -8,6 +8,19 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
+      <label class="form-text">画像</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="click-upload">
+      <%= f.file_field :image, id:"user-image" %>
+      <p>
+        ＊クリックしてファイルをアップロード
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
       <label class="form-text">お名前(全角)</label>
       <span class="indispensable">必須</span>
     </div>
@@ -49,7 +62,7 @@
                     id:"birth-date",
                     use_month_numbers: true,
                     prompt:'--',
-                    start_year: 1930,
+                    start_year: 1980,
                     end_year: (Time.now.year - 5),
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
@@ -62,6 +75,14 @@
       <span class="indispensable">必須</span>
     </div>
     <%= f.collection_select(:birthplace_id, Birthplace.all, :id, :name, {}, {class:"input-default", id:"users-birthplace"}) %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">経験歴</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:experience_id, Experience.all, :id, :name, {}, {class:"input-default", id:"users-experience"}) %>
   </div>
 
   <div class="form-group">

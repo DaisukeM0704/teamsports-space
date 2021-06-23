@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :birthplace
+  belongs_to_active_hash :experience
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,7 +11,6 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
     validates :birthday
-    validates :birthplace_id
     validates :member_id
   end
   
@@ -24,16 +24,19 @@ class User < ApplicationRecord
     validates :last_name_kana
   end
 
-  validates :birthplace_id, numericality: { other_than: 1 } 
-  
+  with_options presence: true, numericality: { other_than: 1 } do
+    validates :birthplace_id
+    validates :experience_id
+  end
+
   validates_uniqueness_of :member_id
 
-  #usernameを利用してログインするようにオーバーライド
+  #member_idを利用してログインするようにオーバーライド
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
       #認証の条件式を変更する
-      where(conditions).where(["username = :value", { :value => username }]).first
+      where(conditions).where(["member_id = :value", { :value => member_id }]).first
     else
       where(conditions).first
     end
