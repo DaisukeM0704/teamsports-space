@@ -2,19 +2,47 @@
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-image: url('memphis.jpg');
-  background-attachment: fixed;
-  background-color:rgba(255,255,255,0.8);
-  background-blend-mode:lighten;
-  background-size: cover;
-  background-position: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  
+}
+.teams-main p {
+  font-size: 50px;
+}
+
+.top-image{
+  width: 50%;
+  height: 50%;
+  margin: 10px 10px;
 }
 
 .teams-logins {
   text-decoration: none;
+  line-height: 30px;
+  margin: 0px 1vw;
+  background-color:rgb(245, 187, 99);
+}
+
+.top-nav {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5px;
+}
+
+.team-login {
+  text-decoration: none;
   line-height: 20px;
+  margin: 0px 1vw;
+  color: #FFFFFF;
+}
+
+.team-sign-up {
+  text-decoration: none;
   margin: 0px 1vw;
   color: #FFFFFF;
 }

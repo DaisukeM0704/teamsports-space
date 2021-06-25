@@ -1,23 +1,25 @@
 <div class="teams-main">
-<p>このページは仮のトップページです。</p>
-</div>
+  <p>WELCOME</p>
 
-<div class="teams-logins">
-  <div class='nav'>
-    <ul class='lists'>
-      <% if team_signed_in? %>
-        <div class="wrapper">
-          <div class="side-bar">
-          <%= render "side_bar" %>
+  <%= image_tag "top.png", class:"top-image" %>
+
+  <div class="teams-logins">
+    <div class='top-nav'>
+      <ul class='lists'>
+        <% if team_signed_in? %>
+          <div class="wrapper">
+            <div class="side-bar">
+              <%= render "side_bar" %>
+            </div>
+            <div class="main">
+              <%= render "main" %>
+            </div>
           </div>
-          <div class="main">
-          <%= render "main" %>
-          </div>
-        </div>
-      <% else %>
-        <li><%= link_to '新規登録', new_team_registration_path, class: "sign-up" %></li>
-        <li><%= link_to 'ログイン', new_team_session_path, class: "login" %></li>
-      <% end %>
-    </ul>
+        <% else %>
+          <li><%= link_to 'チーム新規登録', new_team_registration_path, class: "team-sign-up" %></li>
+          <li><%= link_to 'チームログイン', new_team_session_path, class: "team-login" %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 
   resources :teams, only: [:edit, :update]
   
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions:      'users/sessions',
+    passwords:     'users/passwords',
+    registrations: 'users/registrations'
+  }
 
   resources :users, only: [:edit, :update]
 end
