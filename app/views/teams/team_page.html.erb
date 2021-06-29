@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="side-bar-header">
+      <div class="team-logo">
+        <%# <%= image_tag team.image %>
+      </div>
+    </div>
+
+    <div class="team-logout">
+      <ul class='lists'>
+        <li><%= link_to "チームログアウト", destroy_team_session_path, method: :delete, class: "logout" %></li>
+      </ul>
+    </div>
+
+    <div class="logins">
+      <div class='nav'>
+        <ul class='lists'>
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+          <% else %>
+            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+  <div class="menus">
+    <div>メニュー</div>
+  </div>
+
+  <div class="side-bar-footer">
+    <div>LINK</div>
+  </div>
+</div>
+
+  <div class="main">
+    <%= render "main" %>
+  </div>
+</div>

@@ -9,7 +9,7 @@ class DeviseCreateTeams < ActiveRecord::Migration[6.0]
       t.string  :representative_first_name_kana, null: false
       t.string  :representative_last_name_kana,  null: false
       t.string  :team_name,                      null: false
-      t.string  :team_id,                        null: false, default: ""
+      t.string  :team_cord,                      null: false, default: ""
       t.text    :team_profile,                   null: false
       t.integer :sports_type_id,                 null: false
       t.string  :email

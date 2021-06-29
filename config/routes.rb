@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     passwords:     'teams/passwords',
     registrations: 'teams/registrations'
   }
+  devise_scope :team do
+    get 'team_page' => 'teams#team_page'
+  end
   
   root 'teams#index'
 

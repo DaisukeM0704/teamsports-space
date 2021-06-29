@@ -21,6 +21,16 @@
   height: 180px;
   margin: 10px 10px;
 }
+
+.team-logout{
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5px;
+}
+
 .logins {
   background-color: #2F3E51;
   height: calc(100vh - 95%);

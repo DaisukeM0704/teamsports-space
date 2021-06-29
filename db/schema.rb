@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_132746) do
     t.string "representative_first_name_kana", null: false
     t.string "representative_last_name_kana", null: false
     t.string "team_name", null: false
-    t.string "team_id", default: "", null: false
+    t.string "team_cord", default: "", null: false
     t.text "team_profile", null: false
     t.integer "sports_type_id", null: false
     t.string "email"
