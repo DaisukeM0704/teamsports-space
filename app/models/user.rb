@@ -29,6 +29,7 @@ class User < ApplicationRecord
     validates :experience_id
   end
 
+  validates :email, uniqueness: true
   validates_uniqueness_of :member_id
 
   #member_idを利用してログインするようにオーバーライド

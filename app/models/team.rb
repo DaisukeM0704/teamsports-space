@@ -5,7 +5,8 @@ class Team < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :authentication_keys => [:team_cord]
 
   with_options presence: true do
     validates :team_name

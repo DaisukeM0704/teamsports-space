@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 class Teams::RegistrationsController < Devise::RegistrationsController
-  before_action :set_team, only: [:show, :edit, :update, :destroy, :team_page]
+  before_action :set_team, only: [:edit, :update, :team_page]
   before_action :configure_permitted_parameters
+  before_action :authenticate_team!, except: :index
   # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  before_action :configure_account_update_params, only: [:update]
   
   def index
     @teams = Team.all
@@ -42,10 +43,10 @@ class Teams::RegistrationsController < Devise::RegistrationsController
   end
 
   # DELETE /resource
-  def destroy
-    @team.destroy
-    redirect_to root_path
-  end
+  # def destroy
+  #   @team.destroy
+  #   redirect_to root_path
+  # end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
@@ -81,9 +82,10 @@ class Teams::RegistrationsController < Devise::RegistrationsController
   # end
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+  def configure_account_update_params
+    devise_parameter_sanitizer.permit(:account_update, keys: [:image, :representative_first_name, :representative_last_name, :representative_first_name_kana, :representative_last_name_kana,
+      :team_name, :team_cord, :team_profile, :sports_type_id, :password, :password_confirmation])
+  end
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
