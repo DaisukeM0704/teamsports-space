@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Teams::RegistrationsController < Devise::RegistrationsController
-  before_action :set_team, only: [:edit, :update, :team_page]
+  before_action :set_team, only: [:team_page, :edit, :update]
   before_action :configure_permitted_parameters
   before_action :authenticate_team!, except: :index
   # before_action :configure_sign_up_params, only: [:create]
@@ -27,6 +27,10 @@ class Teams::RegistrationsController < Devise::RegistrationsController
   end
   
   def team_page
+    @team = current_team
+  end
+
+  def show
   end
 
   # GET /resource/edit
