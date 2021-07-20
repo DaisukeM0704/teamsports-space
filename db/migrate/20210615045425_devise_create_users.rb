@@ -13,11 +13,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.date    :birthday,           null: false
       t.integer :birthplace_id,      null: false
       t.integer :experience_id,      null: false
-      t.date    :join
       t.text    :hobby_1,            null: false
       t.text    :hobby_2,            null: false
       t.text    :hobby_3
-      t.text    :profile
+      t.text    :user_profile
       t.string  :email
       t.string  :encrypted_password, null: false, default: ""
 

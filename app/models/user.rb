@@ -2,6 +2,8 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :birthplace
   belongs_to_active_hash :experience
+  has_one_attached :image
+  belongs_to :team
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -17,6 +19,8 @@ class User < ApplicationRecord
   with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ } do
     validates :first_name
     validates :last_name
+    validates :hobby_1
+    validates :hobby_2
   end
   
   with_options presence: true, format: {with: /\A[ァ-ヶー－]+\z/ } do

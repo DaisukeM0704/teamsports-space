@@ -63,11 +63,10 @@ ActiveRecord::Schema.define(version: 2021_06_23_132746) do
     t.date "birthday", null: false
     t.integer "birthplace_id", null: false
     t.integer "experience_id", null: false
-    t.date "join"
     t.text "hobby_1", null: false
     t.text "hobby_2", null: false
     t.text "hobby_3"
-    t.text "profile"
+    t.text "user_profile"
     t.string "email"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

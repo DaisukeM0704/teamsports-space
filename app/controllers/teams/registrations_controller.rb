@@ -27,7 +27,6 @@ class Teams::RegistrationsController < Devise::RegistrationsController
   end
   
   def team_page
-    @team = current_team
   end
 
   def show
