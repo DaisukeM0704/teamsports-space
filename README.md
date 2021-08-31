@@ -18,3 +18,11 @@
 # 要件定義
   https://docs.google.com/spreadsheets/d/12gBHj02OkZRq47sTAVPbhkUc3fRgw9monez3HWsKKLM/edit#gid=282075926
 
+# DEMO
+  ・トップページ
+    https://gyazo.com/7470129529e8f0f67c9a6dd94c1fc420
+  ・チーム新規登録ページ
+    https://gyazo.com/2b1d356ea7be984031886b2947225311
+  ・登録済みチームログインページ
+    https://gyazo.com/46f79a4874781eae665adf30dc645804
+    
