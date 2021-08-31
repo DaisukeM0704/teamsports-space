@@ -1,24 +1,20 @@
-# README
+# teamsports-space
+  
+# 概要
+  チームスポーツに特化したチーム紹介やメンバー・スケジュール管理アプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# URL
+  https://teamsports-space.herokuapp.com/
 
-Things you may want to cover:
+# 利用方法
+  まずは新規登録画面よりチーム登録をしていただきます。
+  チーム登録をしただけではチーム紹介のページしか閲覧できません。
+  チーム登録後、各メンバーの登録をしてメンバーログインをしてください。
+  そうすることでチームに所属しているメンバーの情報や活動スケジュール等の詳細が利用可能になります。
 
-* Ruby version
+# 目指した課題解決
+  大学生や社会人といったチームスポーツをやっている方向けに、チームでの様々な管理を1つにまとめることができます。
 
-* System dependencies
+# 要件定義
+  https://docs.google.com/spreadsheets/d/12gBHj02OkZRq47sTAVPbhkUc3fRgw9monez3HWsKKLM/edit#gid=282075926
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
